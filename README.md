@@ -5,9 +5,9 @@
 <br/>
 <br/>
 
-[![F-Droid](https://img.shields.io/badge/F--Droid-Available-green?style=for-the-badge&logo=fdroid&logoColor=white)](https://f-droid.org)
-[![Android](https://img.shields.io/badge/Android-5.0%2B-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://android.com)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue?style=for-the-badge)](LICENSE)
+[![F-Droid](https://img.shields.io/badge/F--Droid-Coming%20Soon-orange?style=for-the-badge&logo=fdroid&logoColor=white)](https://f-droid.org)
+[![Android](https://img.shields.io/badge/Android-11%2B-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://android.com)
+[![License](https://img.shields.io/badge/License-GPL%20v3.0-blue?style=for-the-badge)](LICENSE)
 [![Sherpa-ONNX](https://img.shields.io/badge/Powered%20by-Sherpa--ONNX-orange?style=for-the-badge)](https://github.com/k2-fsa/sherpa-onnx)
 
 <h1>VoxSherpa TTS</h1>
@@ -121,9 +121,9 @@ Generation speed depends entirely on your device's processor:
 ## Installation
 
 ### F-Droid
-> F-Droid version uses GitHub-hosted model list instead of Firebase — fully FOSS compliant.
+> Coming Soon — F-Droid version uses GitHub-hosted model list instead of Firebase — fully FOSS compliant, GPL v3.0 licensed.
 
-[![Get it on F-Droid](https://fdroid.gitlab.io/artwork/badge/get-it-on.png)](https://f-droid.org)
+[![F-Droid Coming Soon](https://img.shields.io/badge/F--Droid-Coming%20Soon-orange?style=for-the-badge&logo=fdroid&logoColor=white)](https://f-droid.org)
 
 ### Manual APK
 Download the latest APK from [Releases](../../releases).
@@ -155,13 +155,19 @@ VoxSherpa is open source. Contributions welcome:
 ## License
 
 ```
-Copyright 2025 CodeBySonu95
+Copyright (C) 2025 CodeBySonu95
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-    http://www.apache.org/licenses/LICENSE-2.0
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+https://www.gnu.org/licenses/gpl-3.0.html
 ```
 
 ---
