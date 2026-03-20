@@ -5,25 +5,40 @@
 <br/>
 <br/>
 
+[![Download APK](https://img.shields.io/badge/Download-APK%20v1.0--beta-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://huggingface.co/CodeBySonu95/Sherpa-onnx-models/resolve/main/VoxSherpa-TTS_test.apk)
 [![F-Droid](https://img.shields.io/badge/F--Droid-Coming%20Soon-orange?style=for-the-badge&logo=fdroid&logoColor=white)](https://f-droid.org)
 [![Android](https://img.shields.io/badge/Android-11%2B-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://android.com)
 [![License](https://img.shields.io/badge/License-GPL%20v3.0-blue?style=for-the-badge)](LICENSE)
 [![Sherpa-ONNX](https://img.shields.io/badge/Powered%20by-Sherpa--ONNX-orange?style=for-the-badge)](https://github.com/k2-fsa/sherpa-onnx)
 
 <h1>VoxSherpa TTS</h1>
-<h3>Studio-quality offline neural text-to-speech for Android.<br/>No cloud. No limits. No compromise.</h3>
+<h3>Studio-quality offline neural text-to-speech for Android.<br/>Hindi · English · Japanese · Chinese · and more — No cloud. No limits. No compromise.</h3>
 
 </div>
 
 ---
 
-## Why VoxSherpa?
+## 📥 Download
+
+**v1.0-beta is now available!**
+
+> First public beta. Core TTS engines (Kokoro, Piper, VITS) are fully functional. Model download and import supported.
+
+| Variant | Size | Link |
+|---------|------|------|
+| **Universal** | ~80 MB | [⬇️ Download APK v1.0-beta](https://huggingface.co/CodeBySonu95/Sherpa-onnx-models/resolve/main/VoxSherpa-TTS_test.apk) |
+
+> **Why this size?** The APK includes the Sherpa-ONNX inference engine. TTS models (Kokoro, Piper, VITS) are downloaded separately inside the app — so you only download what you need.
+
+---
+
+## 🎯 Why VoxSherpa?
 
 Most TTS apps make you choose between **quality** and **privacy**. Cloud-based tools like ElevenLabs sound incredible — but they require internet, send your text to remote servers, and charge per character.
 
 **VoxSherpa breaks that tradeoff.**
 
-It runs two professional-grade neural engines entirely on your device:
+It runs professional-grade neural engines entirely on your device — supporting **Hindi, English, British English, Japanese, Chinese, and 50+ more languages** — all without any internet connection.
 
 | Engine | Quality | Speed | Best For |
 |--------|---------|-------|----------|
@@ -32,7 +47,7 @@ It runs two professional-grade neural engines entirely on your device:
 
 ---
 
-## Screenshots
+## 📸 Screenshots
 
 <div align="center">
 
@@ -44,10 +59,15 @@ It runs two professional-grade neural engines entirely on your device:
 
 ---
 
-## Features
+## ✨ Features
+
+### 🌐 Multilingual Neural TTS
+- **Hindi** · **English** · **British English** · **Japanese** · **Chinese** · Spanish · French · and 50+ more
+- Kokoro-82M supports 100+ speaker voices across languages
+- First offline Android TTS with serious **Hindi language support**
 
 ### 🎙️ Dual Neural Engine
-- **Kokoro-82M** — 82 million parameter neural model. Multilingual support including Hindi, English, French, Spanish, Chinese, Japanese and 50+ more languages. Same architecture used by top-tier commercial TTS services.
+- **Kokoro-82M** — 82 million parameter neural model. Same architecture used by top-tier commercial TTS services.
 - **Piper / VITS** — Fast, lightweight, natural. Generates speech in seconds on any Android device.
 
 ### 🔒 100% Offline & Private
@@ -56,8 +76,8 @@ It runs two professional-grade neural engines entirely on your device:
 - No account, no telemetry, no data collection
 - Your text never leaves your phone
 
-### 📦 Model Management
-- Download models directly from the app
+### 📦 Flexible Model Management
+- Download models directly from inside the app
 - Import your own `.onnx` models from local storage
 - Multiple models installed simultaneously
 - Smart storage tracking
@@ -77,18 +97,32 @@ It runs two professional-grade neural engines entirely on your device:
 ### ⚙️ Smart Settings
 - **Smart Punctuation** — natural pauses after sentence breaks
 - **Emotion Tags** — `[whisper]`, `[angry]`, `[happy]` support
-- Per-model voice selection (Kokoro supports 100+ speakers)
+- Per-model voice selection
 - Theme-aware UI
 
 ---
 
-## Technical Architecture
+## ⚡ Performance
+
+Generation speed depends on your device's processor. Kokoro prioritizes **quality over speed** by design — running an 82M parameter model fully offline on mobile CPU is genuinely pushing hardware limits.
+
+| Device Tier | Kokoro | Piper / VITS |
+|-------------|--------|--------------|
+| 🟢 Flagship (Snapdragon 8 Gen 3) | ~20–40 sec/min audio | ~5 sec/min audio |
+| 🟡 Mid-range (8-core) | ~60–90 sec/min audio | ~10 sec/min audio |
+| 🔴 Budget (6-core) | ~2–3 min/min audio | ~20 sec/min audio |
+
+> **Tip:** For quick synthesis on any device, use **Piper or VITS**. Switch to **Kokoro** when you need studio-quality output and can wait.
+
+---
+
+## 🛠️ Technical Architecture
 
 ```
 User Text
     │
     ├─── Kokoro Engine (KokoroEngine.java)
-    │         └── Sherpa-ONNX JNI → ONNX Runtime → CPU/NNAPI
+    │         └── Sherpa-ONNX JNI → ONNX Runtime → CPU
     │                   └── kokoro-multi-lang-v1_0 (82M params, FP32)
     │
     └─── Piper / VITS Engine (VoiceEngine.java)
@@ -102,47 +136,21 @@ User Text
 - [Piper](https://github.com/rhasspy/piper) — fast local TTS
 - Android AudioTrack API — low-latency PCM playback
 
----
-
-## Performance
-
-Generation speed depends entirely on your device's processor:
-
-| Device Tier | Kokoro | Piper |
-|-------------|--------|-------|
-| 🟢 Flagship (Snapdragon 8 Gen 3) | ~20–40 sec/min audio | ~5 sec/min audio |
-| 🟡 Mid-range (8-core) | ~60–90 sec/min audio | ~10 sec/min audio |
-| 🔴 Budget (6-core) | ~2–3 min/min audio | ~20 sec/min audio |
-
-> Kokoro prioritizes **quality over speed** by design. It uses the same 82M parameter architecture that powers premium commercial TTS — running it entirely offline on a mobile CPU is genuinely pushing the hardware limits.
+> **On Hardware Acceleration**: NNAPI was investigated but is blocked at the compiled `.so` level in the current Sherpa-ONNX build. CPU inference with optimal thread count is used instead and performs reliably across devices.
 
 ---
 
-## Installation
+## 📲 Model Import (Advanced Users)
 
-### F-Droid
-> Coming Soon — F-Droid version uses GitHub-hosted model list instead of Firebase — fully FOSS compliant, GPL v3.0 licensed.
-
-[![F-Droid Coming Soon](https://img.shields.io/badge/F--Droid-Coming%20Soon-orange?style=for-the-badge&logo=fdroid&logoColor=white)](https://f-droid.org)
-
-### Manual APK
-Download the latest APK from [Releases](../../releases).
-
----
-
-## Model Import (Technical Users)
-
-VoxSherpa supports importing custom `.onnx` models without any server:
+VoxSherpa supports importing any Sherpa-ONNX compatible TTS model:
 
 1. Place your `.onnx` model + `tokens.txt` on device storage
 2. Open **Models tab** → tap **+** → **Import Local Model**
-3. Select your files
-
-Compatible with any Sherpa-ONNX compatible TTS model.
+3. Select your files and start generating
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 VoxSherpa is open source. Contributions welcome:
 
@@ -152,7 +160,7 @@ VoxSherpa is open source. Contributions welcome:
 
 ---
 
-## License
+## 📜 License
 
 ```
 Copyright (C) 2025 CodeBySonu95
@@ -162,17 +170,12 @@ it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
 https://www.gnu.org/licenses/gpl-3.0.html
 ```
 
 ---
 
-## Acknowledgements
+## 🙏 Acknowledgements
 
 - [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) — the inference engine that makes this possible
 - [hexgrad/Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) — the neural model behind studio-quality synthesis
