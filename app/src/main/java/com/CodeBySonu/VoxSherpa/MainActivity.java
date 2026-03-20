@@ -33,7 +33,8 @@ import com.k2fsa.sherpa.onnx.OfflineTts;
 import com.k2fsa.sherpa.onnx.OfflineTtsConfig;
 import com.k2fsa.sherpa.onnx.OfflineTtsModelConfig;
 import com.k2fsa.sherpa.onnx.OfflineTtsVitsModelConfig;
-import com.k2fsa.sherpa.onnx.GeneratedAudio;
+import com.k2fsa.sherpa.onnx.GeneratedAudio;
+
 
 public class MainActivity extends AppCompatActivity {
 	
@@ -52,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
 	}
 	
 	private void initializeLogic() {
+		try {
+    // existing code
+} catch (Throwable t) {
+    android.util.Log.e("CRASH", "onCreate failed", t);
+    android.widget.Toast.makeText(this, "Error: " + t.getMessage(), android.widget.Toast.LENGTH_LONG).show();
+		}
 		getWindow().setSoftInputMode(android.view.WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 		// 1. SETUP VIEWPAGER2 ADAPTER (Inline)
 		binding.viewpager.setAdapter(new androidx.viewpager2.adapter.FragmentStateAdapter(this) {
@@ -151,5 +158,6 @@ public class MainActivity extends AppCompatActivity {
 		// Jab poori app band ho rahi ho, tabhi C++ (JNI) Session ko free karna hai
 		com.CodeBySonu.VoxSherpa.VoiceEngine.getInstance().destroy();
 	}
-	
-}
+	
+
+}
