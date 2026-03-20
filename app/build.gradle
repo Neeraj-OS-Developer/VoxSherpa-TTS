@@ -10,7 +10,7 @@ android {
 	defaultConfig {
 		applicationId "com.CodeBySonu.VoxSherpa"
 		namespace "com.CodeBySonu.VoxSherpa"
-		minSdkVersion 21
+		minSdkVersion 30
 		targetSdkVersion 36
 		versionCode 1
 		versionName "1.0"
