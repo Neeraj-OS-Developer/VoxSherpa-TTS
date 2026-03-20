@@ -53,12 +53,6 @@ public class MainActivity extends AppCompatActivity {
 	}
 	
 	private void initializeLogic() {
-		try {
-    // existing code
-} catch (Throwable t) {
-    android.util.Log.e("CRASH", "onCreate failed", t);
-    android.widget.Toast.makeText(this, "Error: " + t.getMessage(), android.widget.Toast.LENGTH_LONG).show();
-		}
 		getWindow().setSoftInputMode(android.view.WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 		// 1. SETUP VIEWPAGER2 ADAPTER (Inline)
 		binding.viewpager.setAdapter(new androidx.viewpager2.adapter.FragmentStateAdapter(this) {
