@@ -2,7 +2,7 @@ name: Build & Attach APK to Release
 
 on:
   release:
-    types: [created, edited]
+    types: [created]
 
 jobs:
   build:
@@ -13,6 +13,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -31,9 +34,6 @@ jobs:
       - name: Grant execute permission
         run: chmod +x gradlew
 
-      - name: Remove invalid resource files
-        run: find app/src/main/res -name "*.txt" -delete
-
       - name: Build Debug APK
         run: ./gradlew assembleDebug
 
@@ -48,3 +48,4 @@ jobs:
           files: VoxSherpa-TTS-*.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
