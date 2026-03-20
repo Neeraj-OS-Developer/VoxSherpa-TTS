@@ -1,0 +1,29 @@
+VoxSherpa TTS License
+
+Copyright (c) 2026 CodeBySonu95
+
+Permission is granted to anyone to use, modify, and distribute this software
+for personal or educational purposes.
+
+You are free to:
+- Use the code
+- Modify the code
+- Learn from the code
+- Build personal projects
+
+Commercial Use Condition:
+Commercial use is allowed only if the project contains significant
+original modifications. Simply copying, rebranding, or publishing the
+same application (or slightly modified versions) on app stores such as
+Google Play Store is not permitted.
+
+If you want to use this project commercially, you must add your own
+unique features, improvements, or changes that make the project
+significantly different from the original.
+
+For commercial rights or custom app development inquiries:
+Contact: codebysonu95@gmail.com
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+THE AUTHOR SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING FROM THE USE
+OF THIS SOFTWARE.
