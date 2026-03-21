@@ -10,11 +10,21 @@
 [![Android](https://img.shields.io/badge/Android-11%2B-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://android.com)
 [![License](https://img.shields.io/badge/License-GPL%20v3.0-blue?style=for-the-badge)](LICENSE)
 [![Sherpa-ONNX](https://img.shields.io/badge/Powered%20by-Sherpa--ONNX-orange?style=for-the-badge)](https://github.com/k2-fsa/sherpa-onnx)
+[![Built with Sketchware Pro](https://img.shields.io/badge/Built%20with-Sketchware%20Pro-purple?style=for-the-badge)](https://github.com/Sketchware-Pro/Sketchware-Pro)
 
 <h1>VoxSherpa TTS</h1>
 <h3>Studio-quality offline neural text-to-speech for Android.<br/>Hindi · English · British · Japanese · Chinese · and more — No cloud. No limits. No compromise.</h3>
 
 </div>
+
+---
+
+## 🏆 Featured In
+
+> VoxSherpa TTS is listed in the **official README** of [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) — the core inference library powering this app.
+
+[![Sherpa-ONNX](https://img.shields.io/badge/Featured%20in-Sherpa--ONNX%20Official%20README-orange?style=for-the-badge)](https://github.com/k2-fsa/sherpa-onnx#voxsherpa-tts)
+[![HuggingFace](https://img.shields.io/badge/Models%20on-HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/CodeBySonu95/VoxSherpa-TTS)
 
 ---
 
@@ -102,6 +112,7 @@ User Text
 - [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) — multilingual neural TTS model
 - [Piper](https://github.com/rhasspy/piper) — fast local TTS
 - Android AudioTrack API — low-latency PCM playback
+- [Sketchware Pro](https://github.com/Sketchware-Pro/Sketchware-Pro) — Android IDE used to build this app
 
 ---
 
@@ -186,6 +197,7 @@ https://www.gnu.org/licenses/gpl-3.0.html
 - [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) — the inference engine that makes this possible
 - [hexgrad/Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) — the neural model behind studio-quality synthesis
 - [rhasspy/piper](https://github.com/rhasspy/piper) — fast local TTS engine
+- [Sketchware-Pro/Sketchware-Pro](https://github.com/Sketchware-Pro/Sketchware-Pro) — the Android IDE this app was built with
 
 ---
 
