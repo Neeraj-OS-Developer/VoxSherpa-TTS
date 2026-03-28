@@ -5,12 +5,12 @@
 <br/>
 <br/>
 
-[![Download APK](https://img.shields.io/badge/Download-APK%20v1.0--beta-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://huggingface.co/CodeBySonu95/Sherpa-onnx-models/resolve/main/VoxSherpa-TTS_test.apk)
+[![Join Beta](https://img.shields.io/badge/Join-Beta%20v2.1-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://docs.google.com/forms/d/e/1FAIpQLSd-_VgF3DlbiG2eU00Dw_cZECMinUIuSx_Nr6NJt1DeUcIwTQ/viewform?usp=publish-editor)
 [![F-Droid](https://img.shields.io/badge/F--Droid-Coming%20Soon-orange?style=for-the-badge&logo=fdroid&logoColor=white)](https://f-droid.org)
 [![Android](https://img.shields.io/badge/Android-11%2B-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://android.com)
 [![License](https://img.shields.io/badge/License-GPL%20v3.0-blue?style=for-the-badge)](LICENSE)
 [![Sherpa-ONNX](https://img.shields.io/badge/Powered%20by-Sherpa--ONNX-orange?style=for-the-badge)](https://github.com/k2-fsa/sherpa-onnx)
-[![Built with Sketchware Pro](https://img.shields.io/badge/Built%20with-Sketchware%20Pro-purple?style=for-the-badge)](https://github.com/Sketchware-Pro/Sketchware-Pro)
+[![Downloads](https://img.shields.io/github/downloads/CodeBySonu95/VoxSherpa-TTS/total?style=for-the-badge&logo=android&logoColor=white&label=Downloads&color=blue)](https://github.com/CodeBySonu95/VoxSherpa-TTS/releases)
 
 <h1>VoxSherpa TTS</h1>
 <h3>Studio-quality offline neural text-to-speech for Android.<br/>Hindi · English · British · Japanese · Chinese · and more — No cloud. No limits. No compromise.</h3>
@@ -132,13 +132,15 @@ Generation speed depends entirely on your device's processor:
 
 ## Installation
 
-### 📥 Direct APK Download
+### 🧪 Join the Beta — V2.1
 
-**v1.0-beta is now available!**
+**V2.1 beta is now open for testing on Google Play!**
 
-> The APK includes the Sherpa-ONNX inference engine. TTS models (Kokoro, Piper, VITS) are downloaded separately inside the app — so you only download what you need.
+> V2.1 includes System-wide TTS engine, PDF to Audio, TXT to Audio, and more — not yet on GitHub. Source code will be pushed after beta testing is complete.
 
-[![Download APK v1.0-beta](https://img.shields.io/badge/Download-APK%20v1.0--beta-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://huggingface.co/CodeBySonu95/Sherpa-onnx-models/resolve/main/VoxSherpa-TTS_test.apk)
+[![Join Beta](https://img.shields.io/badge/Join-Beta%20v2.1-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://docs.google.com/forms/d/e/1FAIpQLSd-_VgF3DlbiG2eU00Dw_cZECMinUIuSx_Nr6NJt1DeUcIwTQ/viewform?usp=publish-editor)
+
+Fill out the form with your Gmail — I'll add you to the closed test and send you the Play Store link.
 
 ### F-Droid
 > Coming Soon — F-Droid version uses GitHub-hosted model list instead of Firebase — fully FOSS compliant, GPL v3.0 licensed.
