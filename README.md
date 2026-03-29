@@ -141,7 +141,7 @@ If you find this project useful and want early access to V2.1 — I'd really app
 **What's new in V2.1:**
 - 🔊 System-wide TTS engine — use VoxSherpa in any app (Chrome, WhatsApp, etc.)
 - 📄 PDF to Audio
-- 💾 Export audio as FLAC / M4A (in addition to WAV)
+- 📑 TXT to Audio
 
 **How to join:**
 1. Fill out the form below with your Gmail
