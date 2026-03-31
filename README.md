@@ -6,7 +6,7 @@
 <br/>
 
 [![Join Beta](https://img.shields.io/badge/Join-Beta%20v2.1-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://docs.google.com/forms/d/e/1FAIpQLSd-_VgF3DlbiG2eU00Dw_cZECMinUIuSx_Nr6NJt1DeUcIwTQ/viewform?usp=publish-editor)
-[![Support](https://img.shields.io/badge/💙_Support-This%20Project-FF5E5B?style=for-the-badge)](https://codebysonu95.github.io/VoxSherpa-TTS/support.html)
+[![Support](https://img.shields.io/badge/💙_Support-This%20Project-FF5E5B?style=for-the-badge)](https://codebysonu95.github.io/VoxSherpa-TTS/assets/support.html)
 [![F-Droid](https://img.shields.io/badge/F--Droid-Coming%20Soon-orange?style=for-the-badge&logo=fdroid&logoColor=white)](https://f-droid.org)
 [![Android](https://img.shields.io/badge/Android-11%2B-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://android.com)
 [![License](https://img.shields.io/badge/License-GPL%20v3.0-blue?style=for-the-badge)](LICENSE)
