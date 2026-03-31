@@ -112,7 +112,6 @@ User Text
 - [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) — multilingual neural TTS model
 - [Piper](https://github.com/rhasspy/piper) — fast local TTS
 - Android AudioTrack API — low-latency PCM playback
-- [Sketchware Pro](https://github.com/Sketchware-Pro/Sketchware-Pro) — Android IDE used to build this app
 
 ---
 
@@ -174,6 +173,28 @@ Compatible with any Sherpa-ONNX compatible TTS model.
 
 ---
 
+## 💙 Support This Project
+
+VoxSherpa TTS is completely free and open source. If it's useful to you, consider supporting its development ❤️
+
+<div align="center">
+
+### 🌍 International
+
+[![PayPal](https://img.shields.io/badge/Support-PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/CodeBySonu)
+
+### 🇮🇳 India — UPI
+
+**UPI ID:** `9106367134@kotakbank`
+
+<img src="https://raw.githubusercontent.com/CodeBySonu95/VoxSherpa-TTS/34b4c7af7de22613955273e20b49ff1ff5a9d696/assets/UPI_QR.jpg" width="180" alt="UPI QR Code"/>
+
+*Scan with any UPI app — GPay, PhonePe, Paytm, etc.*
+
+</div>
+
+---
+
 ## Contributing
 
 VoxSherpa is open source. Contributions welcome:
@@ -209,7 +230,6 @@ https://www.gnu.org/licenses/gpl-3.0.html
 - [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) — the inference engine that makes this possible
 - [hexgrad/Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) — the neural model behind studio-quality synthesis
 - [rhasspy/piper](https://github.com/rhasspy/piper) — fast local TTS engine
-- [Sketchware-Pro/Sketchware-Pro](https://github.com/Sketchware-Pro/Sketchware-Pro) — the Android IDE this app was built with
 
 ---
 
