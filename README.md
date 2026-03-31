@@ -187,7 +187,7 @@ VoxSherpa TTS is completely free and open source. If it's useful to you, conside
 
 **UPI ID:** `9106367134@kotakbank`
 
-<img src="https://raw.githubusercontent.com/CodeBySonu95/VoxSherpa-TTS/34b4c7af7de22613955273e20b49ff1ff5a9d696/assets/UPI_QR.jpg" width="180" alt="UPI QR Code"/>
+<img src="https://raw.githubusercontent.com/sonusingh9572/VoxSherpa-TTS/main/assets/UPI_QR.jpg" width="180" alt="UPI QR Code"/>
 
 *Scan with any UPI app — GPay, PhonePe, Paytm, etc.*
 
