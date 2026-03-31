@@ -6,6 +6,7 @@
 <br/>
 
 [![Join Beta](https://img.shields.io/badge/Join-Beta%20v2.1-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://docs.google.com/forms/d/e/1FAIpQLSd-_VgF3DlbiG2eU00Dw_cZECMinUIuSx_Nr6NJt1DeUcIwTQ/viewform?usp=publish-editor)
+[![Support](https://img.shields.io/badge/💙_Support-This%20Project-FF5E5B?style=for-the-badge)](https://codebysonu95.github.io/VoxSherpa-TTS/support.html)
 [![F-Droid](https://img.shields.io/badge/F--Droid-Coming%20Soon-orange?style=for-the-badge&logo=fdroid&logoColor=white)](https://f-droid.org)
 [![Android](https://img.shields.io/badge/Android-11%2B-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://android.com)
 [![License](https://img.shields.io/badge/License-GPL%20v3.0-blue?style=for-the-badge)](LICENSE)
@@ -170,28 +171,6 @@ VoxSherpa supports importing custom `.onnx` models without any server:
 3. Select your files
 
 Compatible with any Sherpa-ONNX compatible TTS model.
-
----
-
-## 💙 Support This Project
-
-VoxSherpa TTS is completely free and open source. If it's useful to you, consider supporting its development ❤️
-
-<div align="center">
-
-### 🌍 International
-
-[![PayPal](https://img.shields.io/badge/Support-PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/CodeBySonu)
-
-### 🇮🇳 India — UPI
-
-**UPI ID:** `9106367134@kotakbank`
-
-<img src="https://raw.githubusercontent.com/sonusingh9572/VoxSherpa-TTS/main/assets/UPI_QR.jpg" width="180" alt="UPI QR Code"/>
-
-*Scan with any UPI app — GPay, PhonePe, Paytm, etc.*
-
-</div>
 
 ---
 
