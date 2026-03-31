@@ -416,11 +416,11 @@
 
     <div class="stats">
       <div class="stat">
-        <span class="stat-num">60+</span>
+        <span class="stat-num" id="stat-downloads">—</span>
         <span class="stat-label">Downloads</span>
       </div>
       <div class="stat">
-        <span class="stat-num">23</span>
+        <span class="stat-num" id="stat-stars">—</span>
         <span class="stat-label">GitHub Stars</span>
       </div>
       <div class="stat">
@@ -493,6 +493,37 @@
 </div>
 
 <script>
+  // GitHub API — live stats
+  async function loadStats() {
+    try {
+      const [repoRes, releasesRes] = await Promise.all([
+        fetch('https://api.github.com/repos/CodeBySonu95/VoxSherpa-TTS'),
+        fetch('https://api.github.com/repos/CodeBySonu95/VoxSherpa-TTS/releases')
+      ]);
+
+      if (repoRes.ok) {
+        const repo = await repoRes.json();
+        document.getElementById('stat-stars').textContent = repo.stargazers_count;
+      }
+
+      if (releasesRes.ok) {
+        const releases = await releasesRes.json();
+        let total = 0;
+        releases.forEach(r => {
+          r.assets.forEach(a => { total += a.download_count; });
+        });
+        document.getElementById('stat-downloads').textContent = total > 0 ? total + '+' : '60+';
+      }
+    } catch (e) {
+      // API fail hone par fallback values
+      document.getElementById('stat-downloads').textContent = '60+';
+      document.getElementById('stat-stars').textContent = '23';
+    }
+  }
+
+  loadStats();
+
+  // UPI copy
   function copyUPI() {
     const id = document.getElementById('upi-id').textContent;
     const btn = document.getElementById('copyBtn');
@@ -504,7 +535,6 @@
         btn.classList.remove('copied');
       }, 2000);
     }).catch(() => {
-      // Fallback
       const el = document.createElement('textarea');
       el.value = id;
       document.body.appendChild(el);
