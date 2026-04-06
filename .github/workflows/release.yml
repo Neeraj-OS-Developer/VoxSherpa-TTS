@@ -1,4 +1,4 @@
-name: Build & Attach APK to Release
+name: Build & Attach Debug APK
 
 on:
   release:
@@ -13,23 +13,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
 
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
-
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          gradle-version: 8.13
-
-      - name: Generate Gradle Wrapper
-        run: gradle wrapper --gradle-version 8.13
+          cache: gradle
 
       - name: Grant execute permission
         run: chmod +x gradlew
@@ -40,12 +30,11 @@ jobs:
       - name: Rename APK
         run: |
           VERSION=${{ github.event.release.tag_name }}
-          mv app/build/outputs/apk/debug/app-debug.apk VoxSherpa-TTS-${VERSION}.apk
+          mv app/build/outputs/apk/debug/app-debug.apk VoxSherpa-TTS-${VERSION}-debug.apk
 
       - name: Upload APK to Release
         uses: softprops/action-gh-release@v2
         with:
-          files: VoxSherpa-TTS-*.apk
+          files: VoxSherpa-TTS-*-debug.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
