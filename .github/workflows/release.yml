@@ -29,13 +29,21 @@ jobs:
       - name: Grant execute permission
         run: chmod +x gradlew
 
+      # Is step mein humne Gradle ko 4GB RAM allocate ki hai taaki OOM crash na ho
       - name: Build Debug APK
-        run: ./gradlew assembleDebug
+        run: ./gradlew assembleDebug --no-daemon -Dorg.gradle.jvmargs="-Xmx4g"
 
+      # Ye step ab saare ABI split APKs ko dhundh kar rename karega
       - name: Rename APK
         run: |
-          VERSION=${{ github.event.release.tag_name }}
-          mv app/build/outputs/apk/debug/app-debug.apk VoxSherpa-TTS-${VERSION}-debug.apk
+          VERSION="${{ github.event.release.tag_name }}"
+          if [ -z "$VERSION" ]; then
+            VERSION="run-${{ github.run_number }}"
+          fi
+          for apk in app/build/outputs/apk/debug/*.apk; do
+            filename=$(basename "$apk")
+            mv "$apk" "VoxSherpa-TTS-${VERSION}-${filename}"
+          done
 
       - name: Upload APK to Release
         uses: softprops/action-gh-release@v2
@@ -43,3 +51,4 @@ jobs:
           files: VoxSherpa-TTS-*-debug.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
