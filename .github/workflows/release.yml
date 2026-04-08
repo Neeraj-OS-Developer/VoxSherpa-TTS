@@ -28,12 +28,10 @@ jobs:
 
       - name: Grant execute permission
         run: chmod +x gradlew
-
-      # Is step mein humne Gradle ko 4GB RAM allocate ki hai taaki OOM crash na ho
       - name: Build Debug APK
         run: ./gradlew assembleDebug --no-daemon -Dorg.gradle.jvmargs="-Xmx4g"
 
-      # Ye step ab saare ABI split APKs ko dhundh kar rename karega
+  
       - name: Rename APK
         run: |
           VERSION="${{ github.event.release.tag_name }}"
