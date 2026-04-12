@@ -26,27 +26,24 @@ android {
         namespace "com.CodeBySonu.VoxSherpa"
         minSdkVersion 30
         targetSdkVersion 36
-        versionCode 1
+        versionCode project.hasProperty('vc') ? project.property('vc').toInteger() : 1
         versionName "1.0"
     }
 
     splits {
         abi {
-            def targetAbi = project.hasProperty('buildAbi') ? project.property('buildAbi') : 'all'
-            
-            if (targetAbi == 'universal') {
-                enable false 
+            def isSplitEnabled = project.hasProperty('enableApkSplits') ? project.property('enableApkSplits').toBoolean() : true
+            def isUniversalEnabled = project.hasProperty('includeUniversalApk') ? project.property('includeUniversalApk').toBoolean() : true
+            def tAbi = project.hasProperty('targetAbi') ? project.property('targetAbi') : ''
+
+            enable isSplitEnabled
+            reset()
+            if (tAbi != '') {
+                include tAbi
             } else {
-                enable true
-                reset()
-                if (targetAbi == 'all') {
-                    include 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
-                    universalApk true
-                } else {
-                    include targetAbi
-                    universalApk false
-                }
+                include 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
             }
+            universalApk isUniversalEnabled
         }
     }
 
