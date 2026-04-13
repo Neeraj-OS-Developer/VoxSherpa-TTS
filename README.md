@@ -7,7 +7,6 @@
 
 [![Join Beta](https://img.shields.io/badge/Join-Beta%20v2.1-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://docs.google.com/forms/d/e/1FAIpQLSd-_VgF3DlbiG2eU00Dw_cZECMinUIuSx_Nr6NJt1DeUcIwTQ/viewform?usp=publish-editor)
 [![Support](https://img.shields.io/badge/💙_Support-This%20Project-FF5E5B?style=for-the-badge)](https://codebysonu95.github.io/VoxSherpa-TTS/assets/support.html)
-[![F-Droid](https://img.shields.io/badge/F--Droid-Coming%20Soon-orange?style=for-the-badge&logo=fdroid&logoColor=white)](https://f-droid.org)
 [![Android](https://img.shields.io/badge/Android-11%2B-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://android.com)
 [![License](https://img.shields.io/badge/License-GPL%20v3.0-blue?style=for-the-badge)](LICENSE)
 [![Sherpa-ONNX](https://img.shields.io/badge/Powered%20by-Sherpa--ONNX-orange?style=for-the-badge)](https://github.com/k2-fsa/sherpa-onnx)
@@ -151,16 +150,6 @@ If you find this project useful and want early access to V2.1 — I'd really app
 [![Join Beta](https://img.shields.io/badge/Join-Beta%20v2.1-brightgreen?style=for-the-badge&logo=android&logoColor=white)](https://docs.google.com/forms/d/e/1FAIpQLSd-_VgF3DlbiG2eU00Dw_cZECMinUIuSx_Nr6NJt1DeUcIwTQ/viewform?usp=publish-editor)
 
 > Source code for V2.0 and V2.1 will be pushed to GitHub after beta testing is complete.
-
-### F-Droid
-> Coming Soon — F-Droid version uses GitHub-hosted model list instead of Firebase — fully FOSS compliant, GPL v3.0 licensed.
-
-[![F-Droid Coming Soon](https://img.shields.io/badge/F--Droid-Coming%20Soon-orange?style=for-the-badge&logo=fdroid&logoColor=white)](https://f-droid.org)
-
-### Manual APK
-Download the latest APK from [Releases](../../releases).
-
----
 
 ## Model Import (Technical Users)
 
