@@ -17,6 +17,7 @@ repositories {
 }
 
 android {
+    // Stable SDK version for Android 14/15
     compileSdk 34
 
     useLibrary 'org.apache.http.legacy'
@@ -25,7 +26,7 @@ android {
         applicationId "com.CodeBySonu.VoxSherpa"
         namespace = "com.CodeBySonu.VoxSherpa"
         minSdkVersion 30
-        targetSdkVersion 36
+        targetSdkVersion 34 // Fixed: Changed from 36 to 34 to avoid 'Parse Error'
         versionCode project.hasProperty('vc') ? project.property('vc').toInteger() : 1
         versionName "1.0"
     }
@@ -48,10 +49,13 @@ android {
     }
 
     buildTypes {
+        debug {
+            debuggable true
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig = null
+            signingConfig = null // Unsigned release will only work in debug sessions
         }
     }
 
@@ -69,17 +73,28 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        // Updated to Java 17 for better library compatibility
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    
+    // Networking & JSON
     implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.14'
     implementation 'com.squareup.okio:okio-jvm:3.9.0'
     implementation 'com.google.code.gson:gson:2.11.0'
+    
+    // Android UI Components
     implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'com.google.android.material:material:1.12.0'
-    implementation 'com.github.k2-fsa:sherpa-onnx:1.12.26'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Sherpa-ONNX Core
+    implementation 'com.github.k2-fsa:sherpa-onnx:1.12.38'
+    
+    // ZAROORI: ONNX Runtime (Iske bina engine start nahi hota)
+    implementation 'com.microsoft.onnxruntime:onnxruntime-android:1.17.1'
 }
