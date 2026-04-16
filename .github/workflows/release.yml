@@ -30,7 +30,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Release APK
-        run: ./gradlew assembleRelease --no-daemon --warning-mode all -Dorg.gradle.jvmargs="-Xmx4g"
+        run: ./gradlew assembleDebug --no-daemon --warning-mode all -Dorg.gradle.jvmargs="-Xmx4g"
 
       - name: Rename and Collect APKs
         run: |
