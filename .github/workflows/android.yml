@@ -31,7 +31,7 @@ jobs:
 
       # Maine yahan assembleDebug rakha hai taaki asani se install ho jaye
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: ./gradlew clean assembleDebug --no-daemon -Dorg.gradle.jvmargs="-Xmx4g -XX:MaxMetaspaceSize=1g"
 
       - name: Rename and Collect APKs
         run: |
