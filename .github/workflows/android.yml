@@ -1,0 +1,57 @@
+name: Build VoxSherpa APK
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+          cache: gradle
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install NDK
+        run: echo "y" | sdkmanager "ndk;25.2.9519653"
+
+      - name: Grant execute permission
+        run: chmod +x gradlew
+
+      # Maine yahan assembleDebug rakha hai taaki asani se install ho jaye
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug --stacktrace
+
+      - name: Rename and Collect APKs
+        run: |
+          VERSION="${{ github.event.release.tag_name }}"
+          if [ -z "$VERSION" ]; then
+            VERSION="run-${{ github.run_number }}"
+          fi
+          mkdir -p all_apks
+          
+          # FIX: Ab ye Debug aur Release dono folders dhoondhega
+          find app/build/outputs/apk -type f -name "*.apk" | while read apk; do
+            filename=$(basename "$apk")
+            # purana name saaf karke naya format dena
+            new_name="VoxSherpa-TTS-DEBUG-${VERSION}-${filename}"
+            cp "$apk" "all_apks/$new_name"
+            echo "Collected: $new_name"
+          done
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: VoxSherpa-Debug-Package
+          path: all_apks/*.apk
